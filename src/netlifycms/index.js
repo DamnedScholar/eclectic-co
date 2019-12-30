@@ -3,7 +3,8 @@ import CMS from "netlify-cms-app";
 CMS.init({
   config: {
     backend: {
-      name: "git-gateway"
+      name: "github",
+      repo: "DamnedScholar/damnedscholar.github.io"
     }
   }
 });

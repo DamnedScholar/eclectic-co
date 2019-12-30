@@ -2,12 +2,89 @@
 
 body {
   background-color: @light-black;
-  background-image: linear-gradient(30deg, @dark-black 12%, transparent 12.5%, transparent 87%, @dark-black 87.5%, @dark-black),
-    linear-gradient(150deg, @dark-black 12%, transparent 12.5%, transparent 87%, @dark-black 87.5%, @dark-black),
-    linear-gradient(30deg, @dark-black 12%, transparent 12.5%, transparent 87%, @dark-black 87.5%, @dark-black),
-    linear-gradient(150deg, @dark-black 12%, transparent 12.5%, transparent 87%, @dark-black 87.5%, @dark-black),
-    linear-gradient(60deg, @light-white 25%, transparent 25.5%, transparent 75%, @light-white 75%, @light-white),
-    linear-gradient(60deg, @light-white 25%, transparent 25.5%, transparent 75%, @light-white 75%, @light-white);
-  background-size:80px 140px;
-  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+
+}
+
+.layout-container {
+  height: 100vh;
+  width: 100vw;
+}
+.bg {
+  background-image: url("https://source.unsplash.com/collection/9304956");
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  filter: blur(5px);
+}
+
+.card {
+  height: 80vh;
+  margin: 10vh;
+  display: flex;
+  flex-direction: row;
+  border-radius: 20px;
+  background-color: @light-blue;
+  padding: 10px;
+
+  font-family: 'Sanchez', serif;
+
+  hr {
+    border: none;
+    height: 1px;
+    background-image: linear-gradient(to right, @dark-green, @dark-cyan, @dark-blue);
+    position: relative;
+    width: 80%;
+    margin: 24px;
+    overflow: visible;
+  }
+  hr::after {
+    font-family: "Font Awesome 5 Pro";
+    content:'\f206';
+    color: @dark-cyan;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(13deg);
+    transform-origin: 50% 50%;
+    padding: 0.3rem;
+    font-size: 1.3em;
+    background-color: @light-blue;
+  }
+
+  .headline {
+    margin-left: 15px;
+    margin-top: 15px;
+
+    h1 {
+      font-family: 'Shadows Into Light', serif;
+      font-size: 4rem;
+      margin-bottom: -27px;
+    }
+    h2 {
+      font-family: 'EB Garamond', serif;
+      margin-left: 65px;
+    }
+  }
+
+  .sidebar {
+    width: 360px;
+
+    .portrait {
+      background: @dark-magenta;
+      border-radius: 200px;
+      width: 320px;
+      margin: auto;
+
+      img {
+        width: 320px;
+      }
+    }
+  }
+
+  .content {
+    margin-left: 8px;
+  }
 }
